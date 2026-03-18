@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #0d1420; }
+::-webkit-scrollbar-thumb { background: #254060; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00a89e; }
+::selection { background: rgba(0,212,200,.25); color: #00d4c8; }
+
+@layer components {
+  .card       { @apply bg-[#0d1420] border border-[#1e3050] rounded-xl; }
+  .btn        { @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed; }
+  .btn-cyan   { @apply btn bg-[#00d4c8] text-[#080c12] font-semibold hover:bg-[#00a89e] hover:shadow-[0_0_18px_rgba(0,212,200,0.35)]; }
+  .btn-ghost  { @apply btn bg-[#111a2b] border border-[#254060] text-[#c8daf0] hover:border-[#00a89e] hover:text-[#00d4c8]; }
+  .btn-danger { @apply btn bg-red-500/10 border border-red-500/40 text-red-400 hover:bg-red-500 hover:text-white; }
+  .input      { @apply w-full bg-[#111a2b] border border-[#254060] text-[#c8daf0] rounded-lg px-3 py-2 text-sm
+                       focus:outline-none focus:border-[#00a89e] focus:ring-1 focus:ring-[#00a89e]/20
+                       placeholder:text-[#3a5070]; }
+  .label      { @apply block text-[#6888aa] text-xs font-medium uppercase tracking-wide mb-1; }
+  .th         { @apply text-left px-4 py-3 text-[#6888aa] text-xs font-semibold uppercase tracking-wide; }
+  .td         { @apply px-4 py-3 text-sm border-b border-[#1e3050]; }
+}
