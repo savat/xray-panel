@@ -119,10 +119,10 @@ export default function InboundModal({ data, onClose, onSaved }: any) {
         show: false,
         dest: realDest,
         xver: 0,
-        serverNames: realSni.split(',').map(s=>s.trim()).filter(Boolean),
+        serverNames: realSni.split(',').map((s:string)=>s.trim()).filter(Boolean),
         privateKey: realPvk,
         publicKey:  realPbk,
-        shortIds: realShort.split(',').map(s=>s.trim()).filter(Boolean),
+        shortIds: realShort.split(',').map((s:string)=>s.trim()).filter(Boolean),
         fingerprint: realFp,
       }
     }
@@ -406,4 +406,5 @@ export default function InboundModal({ data, onClose, onSaved }: any) {
       </div>
     </div>
   )
-}
+         }
+        
